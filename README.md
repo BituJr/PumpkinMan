@@ -1,7 +1,7 @@
-# Run-Jump
+# Pumpikin Man
 Projeto de game da disciplina de estágio 1
 #  História
-Uma criatura velocista a procura de novos desafios, e com cede de superar seus limites.
+Um homem com a cabeça de abóbora a procura de novos desafios, e com cede de superar seus limites.
 #  Objetivo
 O obejetivo do jogo é ir o mais longe possível evitando obstáculos.
 #  Regras do jogo e pontuação
