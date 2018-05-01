@@ -9,4 +9,4 @@ O jogador terá que percorrer a maior distância possível. A pontuação será 
 #  Sistema de vida
 O jogador terá apenas uma vida, ou seja, se bater em um dos obstáculos terá que começar tudo novamente.
 #  Fim do jogo
-O jogo acaba quando o perssonagem bater em algum dos obstáculos.
+O jogo acaba quando o personagem bater em algum dos obstáculos.
