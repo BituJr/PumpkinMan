@@ -1,3 +1,5 @@
+-- Criando Eventos
+
 function checkEvent()
      --first check to see if we are already in an event, we only want 1 event going on at a time
      if(eventRun > 0) then
@@ -19,6 +21,10 @@ function checkEvent()
                inEvent = math.random(10)
                eventRun = 1
           end
+		  if(check > 72 and check < 81) then
+					inEvent = 12
+					eventRun = 1
+			end
      end
     
      if(inEvent > 0) then
@@ -28,15 +34,15 @@ end
 
 function runEvent()
      if(inEvent < 6) then
-          groundLevel = groundLevel + 40
+          chaoLevel = chaoLevel + 40
      end
      if(inEvent > 5 and inEvent < 11) then
-          groundLevel = groundLevel - 40
+          chaoLevel = chaoLevel - 40
      end
-     if(groundLevel < groundMax) then
-          groundLevel = groundMax
+     if(chaoLevel < chaoMax) then
+          chaoLevel = chaoMax
      end
-     if(groundLevel > groundMin) then
-          groundLevel = groundMin
+     if(chaoLevel > chaoMin) then
+          chaoLevel = chaoMin
      end
 end
