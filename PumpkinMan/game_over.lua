@@ -1,4 +1,4 @@
--- Creating Game Over
+-- Criando Game Over
 gameOver = display.newImage("images/gameOver.png")
 gameOver.name = "gameOver"
 gameOver.x = 0
@@ -9,9 +9,9 @@ function endGame()
 
 	gameOver.x = screenXcenter
 	gameOver.y = screenYcenter
-	hero:setSequence("jumping")
-	hero:pause()
-	-- timer.cancel( event.source )
+	personagem:setSequence("jumping")
+	personagem:pause()
+	
 end
 
 function restartGame()
@@ -21,9 +21,9 @@ function restartGame()
 	
 	resetScore()
 	resetSpeed()
-	resetHero()
-	resetGround()
+	resetPersonagem()
+	resetChao()
 	resetBackgrounds()
-
-	-- timer.performWithDelay(1, update, -1)
+	resetObstaculos()
+	resetHeadss()
 end
