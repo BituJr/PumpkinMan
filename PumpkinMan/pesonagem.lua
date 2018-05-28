@@ -1,17 +1,17 @@
--- Creating Animated Character
-function killHero()
-	hero.isAlive = false
+-- Criando Animação do personagem
+function killPersonagem()
+	personagem.isAlive = false
 end
 
-function resetHero()
-	hero.x = 100
-	hero.y = screenYcenter -- fall from middle of screen to start
-	hero.gravity = -6
-	hero.accel = 0
-	hero.isAlive = true
-	hero:setSequence("running")
-	hero:play()
-	hero.rotation = 0
+function resetPersonagem()
+	personagem.x = 100
+	personagem.y = screenYcenter 
+	personagem.gravity = -6
+	personagem.accel = 0
+	personagem.isAlive = true
+	personagem:setSequence("running")
+	personagem:play()
+	personagem.rotation = 0
 end
 
 local options =
@@ -90,45 +90,45 @@ local sequenceData =
     { name="running", frames={1, 2, 3, 4, 5, 6, 7, 8 }, time=600 },
     { name="jumping", start=3, count=1, time=300 }
 }
-hero = display.newSprite( imageSheet, sequenceData )
+personagem = display.newSprite( imageSheet, sequenceData )
 
-resetHero()
+resetPersonagem()
 
-collisionRect = display.newRect(hero.x + 22, hero.y, 1, 70)
+collisionRect = display.newRect(personagem.x + 22, personagem.y, 1, 70)
 collisionRect.strokeWidth = 1
 collisionRect:setFillColor(140, 140, 140)
 collisionRect:setStrokeColor(180, 180, 180)
 collisionRect.alpha = 0
 
 character = display.newGroup()
-character:insert(hero)
+character:insert(personagem)
 character:insert(collisionRect)
 
 characters:insert(character)
 
 function updateCharacter()
-	--if our hero is jumping then switch to the jumping animation
+	--if our personagem is jumping then switch to the jumping animation
 	--if not keep playing the running animation
-	if(hero.isAlive == true) then
+	if(personagem.isAlive == true) then
 		if(onGround) then
 			if(wasOnGround) then
 
 			else
-				hero:setSequence("running")
-				hero:play()
+				personagem:setSequence("running")
+				personagem:play()
 			end
 		else
-			hero:setSequence("jumping")
-			hero:play()
+			personagem:setSequence("jumping")
+			personagem:play()
 		end
 		
-		if(hero.accel > 0) then
-			hero.accel = hero.accel - 1
+		if(personagem.accel > 0) then
+			personagem.accel = personagem.accel - 1
 		end
 		
-		hero.y = hero.y - hero.accel
-		hero.y = hero.y - hero.gravity
+		personagem.y = personagem.y - personagem.accel
+		personagem.y = personagem.y - personagem.gravity
 	end
-	collisionRect.y = hero.y
+	collisionRect.y = personagem.y
 
 end
