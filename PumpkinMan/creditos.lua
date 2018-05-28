@@ -23,14 +23,14 @@ function scene:create( event )
 	local sceneGroup = self.view
     -- Code here runs when the scene is first created but has not yet appeared on screen
  
-    local background = display.newImageRect(sceneGroup,"images/BackgroundCerditos1.png", 550, 350)
+    local background = display.newImageRect(sceneGroup,"images/BackgroundCerditos.png", 550, 350)
     background.x = 230
     background.y = display.contentCenterY
 
     local criado = display.newText( sceneGroup, "Desenvolvido por:" , display.contentCenterX, 15, "Fixedsys.ttf", 35 )
     criado:setFillColor( ragdogLib.convertHexToRGB("#054904") )
 
-    local photo = display.newImageRect( sceneGroup,"images/ivan-photo.png", 70, 70 )    
+    local photo = display.newImageRect( sceneGroup,"images/ivan-photo.png", 50, 50 )    
     photo.x = display.contentCenterX
     photo.y = 70
 
