@@ -1,61 +1,62 @@
--- Creating Background
+-- Criando Background
+ --backgroundMusic = audio.loadStream( "backgroundMusic.m4a" )
 backbackground = display.newImage("images/ceu1.png")
-backbackground.x = screenXcenter
-backbackground.y = screenYcenter-groundOffset
+backbackground.x = 240
+backbackground.y = 160
 
-backgroundfar1 = display.newImage("images/montanhas2.png")
-backgroundfar1.x = screenXcenter
-backgroundfar1.y = screenYcenter-groundOffset
+backgroundM1 = display.newImage("images/montanhas2.png")
+backgroundM1.x = screenXcenter
+backgroundM1.y = screenYcenter-chaoOffset
 
-backgroundfar2 = display.newImage("images/montanhas2.png")
-backgroundfar2.x = screenXwidth*2.5
-backgroundfar2.y = screenYcenter-groundOffset
+backgroundM2 = display.newImage("images/montanhas2.png")
+backgroundM2.x = screenXwidth*2.5
+backgroundM2.y = screenYcenter-chaoOffset
 
-backgroundnear1 = display.newImage("images/background11.png")
-backgroundnear1.x = screenXcenter
-backgroundnear1.y = screenYcenter-groundOffset
+backgroundA1 = display.newImage("images/arvores.png")
+backgroundA1.x = screenXcenter
+backgroundA1.y = screenYcenter-chaoOffset
 
-backgroundnear2 = display.newImage("images/background11.png")
-backgroundnear2.x = screenXwidth*1.5
-backgroundnear2.y = screenYcenter-groundOffset
+backgroundA2 = display.newImage("images/arvores.png")
+backgroundA2.x = screenXwidth*1.5
+backgroundA2.y = screenYcenter-chaoOffset
 
 function updateBackgrounds()
-	--far background movement
-	backgroundfar1.x = backgroundfar1.x - (speed/55)
-	if(backgroundfar1.x < -(screenXwidth-1)) then
-		backgroundfar1.x = screenXwidth*2-1
+	--Movimentando das montanhas
+	backgroundM1.x = backgroundM1.x - (speed/55)
+	if(backgroundM1.x < -(screenXwidth-1)) then
+		backgroundM1.x = screenXwidth*2-1
 	end
 
-	backgroundfar2.x = backgroundfar2.x - (speed/55)
-	if(backgroundfar2.x < -(screenXwidth-1)) then
-		backgroundfar2.x = screenXwidth*2-1
+	backgroundM2.x = backgroundM2.x - (speed/55)
+	if(backgroundM2.x < -(screenXwidth-1)) then
+		backgroundM2.x = screenXwidth*2-1
 	end
 	 
-	--near background movement
-	backgroundnear1.x = backgroundnear1.x - (speed/5)
-	if(backgroundnear1.x < -(screenXcenter-1)) then
-		backgroundnear1.x = screenXwidth*1.5
+	--Movimentando das árvores
+	backgroundA1.x = backgroundA1.x - (speed/5)
+	if(backgroundA1.x < -(screenXcenter-1)) then
+		backgroundA1.x = screenXwidth*1.5
 	end
 	 
-	backgroundnear2.x = backgroundnear2.x - (speed/5)
-	if(backgroundnear2.x < -(screenXcenter-1)) then
-		backgroundnear2.x = screenXwidth*1.5
+	backgroundA2.x = backgroundA2.x - (speed/5)
+	if(backgroundA2.x < -(screenXcenter-1)) then
+		backgroundA2.x = screenXwidth*1.5
 	end
 end
 
 function resetBackgrounds()
 	backbackground.x = screenXcenter
-	backbackground.y = screenYcenter-groundOffset
+	backbackground.y = screenYcenter-chaoOffset
 
-	backgroundfar1.x = screenXcenter
-	backgroundfar1.y = screenYcenter-groundOffset
+	backgroundM1.x = screenXcenter
+	backgroundM1.y = screenYcenter-chaoOffset
 
-	backgroundfar2.x = screenXwidth*2.5
-	backgroundfar2.y = screenYcenter-groundOffset
+	backgroundM2.x = screenXwidth*2.5
+	backgroundM2.y = screenYcenter-chaoOffset
 
-	backgroundnear1.x = screenXcenter
-	backgroundnear1.y = screenYcenter-groundOffset
+	backgroundA1.x = screenXcenter
+	backgroundA1.y = screenYcenter-chaoOffset
 
-	backgroundnear2.x = screenXwidth*1.5
-	backgroundnear2.y = screenYcenter-groundOffset
+	backgroundA2.x = screenXwidth*1.5
+	backgroundA2.y = screenYcenter-chaoOffset
 end
