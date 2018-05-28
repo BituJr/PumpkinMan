@@ -1,10 +1,10 @@
-baseSpeed = 4
+baseSpeed = 3
 speed = baseSpeed
 lastSpeed = speed
 
 function updateSpeed()
 	-- Uncomment to speed up game over time
-	speed = speed + .004
+	speed = speed + .003
 	lastSpeed = speed
 end
 
