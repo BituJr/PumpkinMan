@@ -11,6 +11,7 @@ local composer = require("composer")
 -----------Criando a cena----------
 local scene = composer.newScene()
 
+
 local musicTrack
 musicTrack = audio.loadStream( "audio/Life-in-a-Mystical-Village.mp3")
 
@@ -54,11 +55,11 @@ function scene:create(event)
    -- playButton.rotation = 05
 
    -- Botao Pontos
-    local pontosButton = display.newImageRect(sceneGroup,"images/creditos.png", 160,50)
-    pontosButton.x = display.contentCenterX 
-    pontosButton.y = 200
-   -- pontosButton.rotation = -05
-
+    local creditosButton = display.newImageRect(sceneGroup,"images/creditos.png", 160,50)
+    creditosButton.x = display.contentCenterX 
+    creditosButton.y = 200
+   -- creditosButton.rotation = -05
+	
     -- Botao Sair
     local exitButton = display.newImageRect(sceneGroup,"images/sair.png", 160,50)
     exitButton.x = display.contentCenterX
@@ -68,11 +69,11 @@ function scene:create(event)
     
     playButton:addEventListener("tap", playGame)
 	
-	pontosButton:addEventListener("tap", creditosGame)
+	creditosButton:addEventListener("tap", creditosGame)
 	
     exitButton:addEventListener("tap", exitGame)
-
-    audio.play( musicTrack, { channel=1, loops=-1 } )
+	
+	audio.play( musicTrack, { channel=1, loops=-1 } )
 
 end
 
